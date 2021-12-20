@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ApplicationInfo</string>
+    <string name="Scan">SCAN</string>
+    <string name="Scan_result">SCAN RESULT</string>
+    <string name="Size">Size:</string>
+    <string name="Last_date">Last launch date:</string>
+    <string name="Install_date">Installation date:</string>
+    <string name="Mb"> Mb</string>
+    <string name="Size_text">Size: </string>
+</resources>
