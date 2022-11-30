@@ -5,11 +5,10 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 
 import java.io.File;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PackageMan implements Serializable {
+public class PackageMan {
 
     public ArrayList<ModelApp> arrayListApp;
 

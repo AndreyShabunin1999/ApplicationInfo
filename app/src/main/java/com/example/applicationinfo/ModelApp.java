@@ -2,11 +2,10 @@ package com.example.applicationinfo;
 
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
-import android.os.Parcelable;
 
 import java.io.File;
 
-public class ModelApp implements Parcelable {
+public class ModelApp {
 
     public ModelApp(String titles, Drawable mImages, File file, String package_name, String version) {
         this.titles = titles;
@@ -31,18 +30,6 @@ public class ModelApp implements Parcelable {
         package_name = in.readString();
         version = in.readString();
     }
-
-    public static final Creator<ModelApp> CREATOR = new Creator<ModelApp>() {
-        @Override
-        public ModelApp createFromParcel(Parcel in) {
-            return new ModelApp(in);
-        }
-
-        @Override
-        public ModelApp[] newArray(int size) {
-            return new ModelApp[size];
-        }
-    };
 
     public void setTitles(String titles) {
         this.titles = titles;
@@ -82,15 +69,5 @@ public class ModelApp implements Parcelable {
 
     public String getVersion() {
         return version;
-    }
-
-    @Override
-    public int describeContents() {
-        return 0;
-    }
-
-    @Override
-    public void writeToParcel(Parcel parcel, int i) {
-        parcel.writeStringArray(new String[] { titles, mImages.toString(), file.toString(), package_name, version });
     }
 }
