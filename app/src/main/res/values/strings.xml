@@ -2,9 +2,8 @@
     <string name="app_name">ApplicationInfo</string>
     <string name="Scan">SCAN</string>
     <string name="Scan_result">SCAN RESULT</string>
-    <string name="Size">Size:</string>
-    <string name="Last_date">Last launch date:</string>
-    <string name="Install_date">Installation date:</string>
-    <string name="Mb"> Mb</string>
-    <string name="Size_text">Size: </string>
+    <string name="Version">Version:</string>
+    <string name="Name_package_app">Name package app:</string>
+    <string name="CRC32">CRC32:</string>
+    <string name="btn_back">Back</string>
 </resources>
