@@ -10,5 +10,5 @@
     <string name="CRC32Code">CRC32: %1$s</string>
     <string name="btnBack">Back</string>
     <string name="btnOpen">Open App</string>
-    <string name="noActivity">%1$s does not contain any activities</string>
+    <string name="noActivity">The %1$s cannot be opened</string>
 </resources>

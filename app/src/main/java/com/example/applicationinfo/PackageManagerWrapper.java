@@ -10,7 +10,7 @@ import java.util.List;
 
 public class PackageManagerWrapper {
 
-    public ArrayList<ModelApp> arrayListApp;
+    public List<ModelApp> arrayListApp;
 
     PackageManagerWrapper(PackageManager pm){
         arrayListApp = new ArrayList<>();

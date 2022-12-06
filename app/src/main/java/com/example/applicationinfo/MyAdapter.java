@@ -13,15 +13,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     private final Context context;
-    private static ArrayList<ModelApp> arrayListApp;
+    private static List<ModelApp> arrayListApp;
 
 
-    public MyAdapter(Context context, ArrayList<ModelApp> arrayListApp){
+    public MyAdapter(Context context, List<ModelApp> arrayListApp){
         this.context = context;
         MyAdapter.arrayListApp = arrayListApp;
     }

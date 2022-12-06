@@ -20,7 +20,7 @@ public class ApplicationListActivity extends AppCompatActivity {
 
         PackageManagerWrapper packageManagerWrapper = new PackageManagerWrapper(getPackageManager());
 
-        MyAdapter adapter = new MyAdapter(ApplicationListActivity.this, packageManagerWrapper.arrayListApp);
+        RecyclerView.Adapter<MyAdapter.MyViewHolder> adapter = new MyAdapter(ApplicationListActivity.this, packageManagerWrapper.arrayListApp);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(ApplicationListActivity.this, 1, GridLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(gridLayoutManager);
