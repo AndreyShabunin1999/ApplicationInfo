@@ -22,7 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:largeHeap="true"
-        android:theme="@style/Theme.ApplicationInfo">
+        android:theme="@style/Theme.ApplicationInfo"
+        tools:replace="icon, label">
         <activity
             android:name=".ApplicationInfoActivity"
             android:configChanges="orientation"
