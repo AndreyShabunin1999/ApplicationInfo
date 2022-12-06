@@ -29,7 +29,7 @@ public class PackageManagerWrapper {
 
                 File file = new File(packageInfo.publicSourceDir);
 
-                ModelApp modelApp = new ModelApp(packageInfo.uid, appName, packageInfo.loadIcon(pm), file, info.packageName, info.versionName);
+                ModelApp modelApp = new ModelApp(appName, packageInfo.loadIcon(pm), file, info.packageName, info.versionName);
 
                 arrayListApp.add(modelApp);
 

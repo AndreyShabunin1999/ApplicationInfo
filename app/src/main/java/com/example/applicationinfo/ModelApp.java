@@ -6,16 +6,13 @@ import java.io.File;
 
 public class ModelApp {
 
-    public ModelApp(Integer uid, String titles, Drawable mImages, File file, String packageName, String version) {
-        this.uid = uid;
+    public ModelApp(String titles, Drawable mImages, File file, String packageName, String version) {
         this.titles = titles;
         this.mImages = mImages;
         this.file = file;
         this.packageName = packageName;
         this.version = version;
     }
-
-    private Integer uid;
 
     private String titles;
 
@@ -26,8 +23,6 @@ public class ModelApp {
     private String packageName;
 
     private String version;
-
-    public void setUid(Integer uid) {this.uid = uid;}
 
     public void setTitles(String titles) {
         this.titles = titles;
@@ -44,8 +39,6 @@ public class ModelApp {
     public void setPackageName(String package_name) {
         this.packageName = package_name;
     }
-
-    public Integer getUid() {return uid;}
 
     public String getTitles() {
         return titles;
