@@ -17,12 +17,13 @@ import java.util.ArrayList;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
-    private Context context;
+    private final Context context;
     private static ArrayList<ModelApp> arrayListApp;
+
 
     public MyAdapter(Context context, ArrayList<ModelApp> arrayListApp){
         this.context = context;
-        this.arrayListApp = arrayListApp;
+        MyAdapter.arrayListApp = arrayListApp;
     }
 
     @NonNull
@@ -36,7 +37,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.mTextView.setText(arrayListApp.get(position).getTitles());
         Glide.with(context)
-                //.load(images.get(position))
                 .load(arrayListApp.get(position).getmImages())
                 .error(R.drawable.icon)
                 .into(holder.mImageView);
@@ -47,10 +47,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         return arrayListApp.size();
     }
 
+
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
         ImageView mImageView;
         TextView mTextView;
+        RecyclerView recyclerView;
         Context context = itemView.getContext();
 
 
@@ -59,17 +61,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
             mImageView = itemView.findViewById(R.id.imageview);
             mTextView = itemView.findViewById(R.id.textview);
+            recyclerView = itemView.findViewById(R.id.recyclerview1);
 
-            itemView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-
-                    for(int i = 0; i < arrayListApp.size(); i++){
-                        if(arrayListApp.get(i).getTitles().equals(mTextView.getText().toString())){
-                            Intent intent = new Intent(context, InfoApplication.class);
-                            intent.putExtra("index", i);
-                            context.startActivity(intent);
-                        }
+            itemView.setOnClickListener(view -> {
+                for(int i = 0; i < arrayListApp.size(); i++){
+                    if(arrayListApp.get(i).getTitles().equals(mTextView.getText().toString())){
+                        Intent intent = new Intent(context, ApplicationInfoActivity.class);
+                        intent.putExtra("index", i);
+                        context.startActivity(intent);
                     }
                 }
             });

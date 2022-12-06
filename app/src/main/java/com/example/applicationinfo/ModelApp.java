@@ -1,19 +1,21 @@
 package com.example.applicationinfo;
 
 import android.graphics.drawable.Drawable;
-import android.os.Parcel;
 
 import java.io.File;
 
 public class ModelApp {
 
-    public ModelApp(String titles, Drawable mImages, File file, String package_name, String version) {
+    public ModelApp(Integer uid, String titles, Drawable mImages, File file, String packageName, String version) {
+        this.uid = uid;
         this.titles = titles;
         this.mImages = mImages;
         this.file = file;
-        this.package_name = package_name;
+        this.packageName = packageName;
         this.version = version;
     }
+
+    private Integer uid;
 
     private String titles;
 
@@ -21,15 +23,11 @@ public class ModelApp {
 
     private File file;
 
-    private String package_name;
+    private String packageName;
 
     private String version;
 
-    protected ModelApp(Parcel in) {
-        titles = in.readString();
-        package_name = in.readString();
-        version = in.readString();
-    }
+    public void setUid(Integer uid) {this.uid = uid;}
 
     public void setTitles(String titles) {
         this.titles = titles;
@@ -43,9 +41,11 @@ public class ModelApp {
         this.file = file;
     }
 
-    public void setPackage_name(String package_name) {
-        this.package_name = package_name;
+    public void setPackageName(String package_name) {
+        this.packageName = package_name;
     }
+
+    public Integer getUid() {return uid;}
 
     public String getTitles() {
         return titles;
@@ -60,7 +60,7 @@ public class ModelApp {
     }
 
     public String getPackage_name() {
-        return package_name;
+        return packageName;
     }
 
     public void setVersion(String version) {

@@ -1,9 +1,14 @@
 <resources>
-    <string name="app_name">ApplicationInfo</string>
+    <string name="appName">ApplicationInfo</string>
     <string name="Scan">SCAN</string>
-    <string name="Scan_result">SCAN RESULT</string>
+    <string name="ScanResult">SCAN RESULT</string>
     <string name="Version">Version:</string>
-    <string name="Name_package_app">Name package app:</string>
+    <string name="VersionCode">Version: %1$s</string>
+    <string name="NamePackageApp">Name package app:</string>
+    <string name="NamePackageAppCode">Name package app: %1$s</string>
     <string name="CRC32">CRC32:</string>
-    <string name="btn_back">Back</string>
+    <string name="CRC32Code">CRC32: %1$s</string>
+    <string name="btnBack">Back</string>
+    <string name="btnOpen">Open App</string>
+    <string name="noActivity">%1$s does not contain any activities</string>
 </resources>

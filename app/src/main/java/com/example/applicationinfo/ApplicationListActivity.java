@@ -7,10 +7,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 
-public class AllAplications extends AppCompatActivity {
+public class ApplicationListActivity extends AppCompatActivity {
 
     private RecyclerView mRecyclerView;
-    private MyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +18,11 @@ public class AllAplications extends AppCompatActivity {
 
         initView();
 
-        PackageMan packageMan = new PackageMan(getPackageManager());
+        PackageManagerWrapper packageManagerWrapper = new PackageManagerWrapper(getPackageManager());
 
-        adapter = new MyAdapter(AllAplications.this, packageMan.arrayListApp);
+        MyAdapter adapter = new MyAdapter(ApplicationListActivity.this, packageManagerWrapper.arrayListApp);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(AllAplications.this, 1, GridLayoutManager.VERTICAL, false);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(ApplicationListActivity.this, 1, GridLayoutManager.VERTICAL, false);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         mRecyclerView.setHasFixedSize(true);
 
@@ -31,6 +30,6 @@ public class AllAplications extends AppCompatActivity {
     }
 
     private void initView() {
-        mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview1);
+        mRecyclerView = findViewById(R.id.recyclerview1);
     }
 }
